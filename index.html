@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Follow What I Do!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body>
+    <h1>Follow What I Do!</h1>
+    
+    <p>
+      You made it to the Follow Me game! Now follow me and I'll show you how to win! Click "Start the game!" to begin. 
+      Remember, once we start, we cannot stop because I really like to keep playing! I will reveal in a flash a 
+      numbered image with a sound. Then, you go! You will then click that same buttoned number to follow me. 
+      Then, it's my turn again. I will start over to do show you that number and a new one too! Your turn. 
+      You will push that first number and the second number as well. We will go in turns to follow each other 
+      in the sequence of numbers that I show you until you catch up and win! Let's have some fun!
+    </p>
+    
+    <button id="startBtn" onclick="startGame()">
+      Start the game!
+    </button>
+    <button id="endBtn" class="hidden" onclick="endGame()">
+      End the game!
+    </button>
+    <label id="turnLabel" class="hidden">Whose turn is it?</label>
+    <label id="myTurnLabel" class="hidden">My turn!</label>
+    <label id="yourTurnLabel" class="hidden">Your turn!</label>
+                                     
+    <div id="gameButtonArea">
+      <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
+      <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)"></button>
+      <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)"></button>
+      <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)"></button>
+      <button id="button5" onmousedown="startTone(5)" onmouseup="stopTone()" onclick="guess(5)"></button>
+    </div>
+    
+  </body>
+</html>
