@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-* ![X] <img src='https://recordit.co/VBttyhssXz' title='Follow What I Do - Video Walkthrough' width=''alt='Follow What I do - Video Walkthrough' />
+* ![X]https://recordit.co/VBttyhssXz
 * ![X]https://recordit.co/Pauluz4fi7
 * ![X]https://recordit.co/BN5T5PlUMn
 
@@ -60,7 +60,7 @@ I would complete the optional features and more. I would clean up the comments a
 
 ## Interview Recording URL Link
 
-<img src='https://drive.google.com/file/d/1IeJKBXZC7OLolXYtQgkxvttGPcacafz-/view?usp=sharing' title='Zamir Omaid Interview Recording' width=''alt='Zamir Omaid Interview Recording' />
+https://drive.google.com/file/d/1IeJKBXZC7OLolXYtQgkxvttGPcacafz-/view?usp=sharing
 
 
 ## License
