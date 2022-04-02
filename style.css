@@ -10,25 +10,49 @@ html {
 
 /* adjust typography defaults */
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: verdana, arial, sans-serif;
   margin: 2em;
-  background-color: slategrey;
-  color: white;
+  background-color: darkgreen;
+  color: lightgrey;
 }
 
 h1 {
   font-family: verdana, arial, sans-serif;
+  color: lightgreen;
+}
+
+#gameResetNotification {
+  font-family: verdana,arial,sans-serif;
+  color: red;
+}
+#timerLabel {
+  font-family: verdana,arial,sans-serif;
+  font-size: 25px;
+  color: black;
+  background: white;
+}
+#guessTimeLimitLabel {
+  font-family: verdana,arial,sans-serif;
+  font-size: 25px;
+  color: white;
+  background: red;
+}
+#strikesLabel {
+  font-family: verdana,arial,sans-serif;
+  font-size: 20px;
+  color: white;
+  background: black;
 }
 
 button {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px;
+  border-radius: 50px;
 }
 
 #gameButtonArea > button {
-  width:200px;
-  height:200px;
-  margin:2px;
+  width:100px;
+  height:100px;
+  margin:4px;
 }
 
 .hidden {
@@ -40,6 +64,7 @@ button {
 }
 #button1:active, #button1.lit {
   background: green;
+  background-image: 
 }
 #button2 {
   background: lightblue;

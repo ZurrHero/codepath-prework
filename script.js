@@ -1,5 +1,4 @@
 //global constants
-const clueHoldTime = 1000; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 const buttons = document.querySelectorAll('button1, button2, button3, button4, button5');
@@ -9,7 +8,9 @@ var pattern = [2, 2, 4, 3, 5, 2, 1, 2, 4];
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
+var clueHoldTime = 1000; //how long to hold each clue's light/sound
 var volume = 0.5; //must be between 0.0 and 1.0
+var strikes;
 var guessCounter = 0; //progress of where user is in guessint pattern sequence
 
 function startGame(){
@@ -22,6 +23,10 @@ function startGame(){
     //document.getElementById("turnLabel").classList.add("hidden");
     //document.getElementById("myTurnLabel").classList.remove("hidden");
     //document.getElementById("yourTurnLabel").classList.add("hidden");
+    pattern = randomizePattern(pattern);
+    strikes = 0;
+    document.getElementById("strikesLabel").innerHTML = "Strikes: " + strikes + " of 3.";
+    document.getElementById("gameResetNotification").classList.add("hidden");
     playClueSequence();
 }
 function endGame(){
@@ -30,7 +35,18 @@ function endGame(){
   document.getElementById("startBtn").classList.remove("hidden");
   //document.getElementById("turnLabel").classList.remove("hidden");
   //document.getElementById("myTurnLabel").classList.add("hidden");
+  /*setTimeout(() => {
+    strikes = 0;
+    document.getElementById("strikesLabel").innerHTML = "Strikes: " + strikes + " of 3.";}, 60000);*/
   buttons.disabled = true;
+}
+
+function randomizePattern(pattern){
+  for(let i = 0; i <= pattern.length - 1; i++){
+    var randomNum = Math.random() * 5;
+    pattern[i] = Math.floor(randomNum) + 1;
+  }
+  return pattern;
 }
 
 function lightButton(btn){
@@ -57,11 +73,17 @@ function playClueSequence() {
   //document.getElementById("myTurnLabel").classList.remove("hidden");
   //document.getElementById("yourTurnLabel").classList.add("hidden");
   //console.log("whose turn is it? 5 My turn shown.");
+  
+  console.log("progress: " + progress);
+  console.log("cht: " + clueHoldTime);
   guessCounter = 0;
   context.resume()
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i = 0; i <= progress; i++){ //for each clue that is revealed so far
     //console.log("whose turn is it? 6");
+    clueHoldTime = 1000 - (progress * 100);
+    console.log("progress: " + progress);
+    console.log("cht: " + clueHoldTime);
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue, delay, pattern[i]) //set a timeout to play that clue
     delay += clueHoldTime
@@ -107,9 +129,18 @@ function guess(btn){
       guessCounter++;
     }
   }else{
-    //Guess was incorrect
-    //GAME OVER: LOSE!
     loseGame();
+    /*if(strikes == 2){
+      document.getElementById("strikesLabel").innerHTML = "Strike " + strikes + " of 3";
+      loseGame();
+      //Guess was incorrect
+      //GAME OVER: LOSE!
+    }else{
+      strikes += 1;
+      document.getElementById("strikesLabel").innerHTML = "Strike " + strikes + " of 3";
+      //console.log("strike: " + strikes);
+      playClueSequence();
+    }*/
   }
 } 
 
@@ -117,7 +148,7 @@ function guess(btn){
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 261.6,
+  1: 240,
   2: 329.6,
   3: 392,
   4: 466.2,
