@@ -40,9 +40,8 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 ![X]https://recordit.co/VBttyhssXz
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+![X]https://recordit.co/Pauluz4fi7
+![]https://recordit.co/BN5T5PlUMn
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -61,7 +60,7 @@ I would complete the optional features and more. I would clean up the comments a
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](https://recordit.co/VBttyhssXz)
+https://drive.google.com/file/d/1IeJKBXZC7OLolXYtQgkxvttGPcacafz-/view?usp=sharing
 
 
 ## License
