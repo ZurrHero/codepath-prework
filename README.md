@@ -39,9 +39,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![X]https://recordit.co/VBttyhssXz
-![X]https://recordit.co/Pauluz4fi7
-![ ]https://recordit.co/BN5T5PlUMn
+* ![X] <img src='https://recordit.co/VBttyhssXz' title='Follow What I Do - Video Walkthrough' width=''alt='Follow What I do - Video Walkthrough' />
+* ![X]https://recordit.co/Pauluz4fi7
+* ![X]https://recordit.co/BN5T5PlUMn
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -60,12 +60,12 @@ I would complete the optional features and more. I would clean up the comments a
 
 ## Interview Recording URL Link
 
-https://drive.google.com/file/d/1IeJKBXZC7OLolXYtQgkxvttGPcacafz-/view?usp=sharing
+<img src='https://drive.google.com/file/d/1IeJKBXZC7OLolXYtQgkxvttGPcacafz-/view?usp=sharing' title='Zamir Omaid Interview Recording' width=''alt='Zamir Omaid Interview Recording' />
 
 
 ## License
 
-    Copyright [Zamir Omaid]
+    Copyright [2022] [Zamir Omaid]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
